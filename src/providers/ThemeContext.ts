@@ -7,4 +7,5 @@ export interface ThemeContextType {
   setTheme: (theme: Theme) => void;
 }
 
+
 export const ThemeContext = createContext<ThemeContextType | null>(null);
