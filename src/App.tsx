@@ -1,7 +1,7 @@
 import ThemeToggle from "@/components/theme/ThemeToggle";
 import { useTranslation } from "react-i18next";
 
-const App = () => {
+function App() {
   const { t } = useTranslation("home");
 
   return (
@@ -10,6 +10,6 @@ const App = () => {
       <h1>{t("hero.title")}</h1>
     </main>
   );
-};
+}
 
 export default App;

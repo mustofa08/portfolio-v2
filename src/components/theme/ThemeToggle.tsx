@@ -2,7 +2,7 @@ import useTheme from "@/hooks/useTheme";
 import { themeOptions } from "./theme.constants";
 import { motion } from "framer-motion";
 
-const ThemeToggle = () => {
+function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -35,6 +35,6 @@ const ThemeToggle = () => {
       })}
     </div>
   );
-};
+}
 
 export default ThemeToggle;
