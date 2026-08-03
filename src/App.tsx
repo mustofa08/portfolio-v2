@@ -1,9 +1,18 @@
-import { useTranslation } from "react-i18next";
+import useTheme from "@/hooks/useTheme";
 
 const App = () => {
-  const { t } = useTranslation("home");
+  const { theme, resolvedTheme, setTheme } = useTheme();
 
-  return <h1>{t("hero.title")}</h1>;
+  return (
+    <div>
+      <h1>Theme: {theme}</h1>
+      <h2>Resolved: {resolvedTheme}</h2>
+
+      <button onClick={() => setTheme("light")}>Light</button>
+      <button onClick={() => setTheme("dark")}>Dark</button>
+      <button onClick={() => setTheme("system")}>System</button>
+    </div>
+  );
 };
 
 export default App;
