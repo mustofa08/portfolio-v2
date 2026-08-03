@@ -1,9 +1,9 @@
-import { test } from "@/utils/test";
-
-console.log(test);
+import { useTranslation } from "react-i18next";
 
 const App = () => {
-  return <h1>Portfolio</h1>;
+  const { t } = useTranslation("home");
+
+  return <h1>{t("hero.title")}</h1>;
 };
 
 export default App;
