@@ -1,17 +1,14 @@
-import useTheme from "@/hooks/useTheme";
+import ThemeToggle from "@/components/theme/ThemeToggle";
+import { useTranslation } from "react-i18next";
 
 const App = () => {
-  const { theme, resolvedTheme, setTheme } = useTheme();
+  const { t } = useTranslation("home");
 
   return (
-    <div>
-      <h1>Theme: {theme}</h1>
-      <h2>Resolved: {resolvedTheme}</h2>
-
-      <button onClick={() => setTheme("light")}>Light</button>
-      <button onClick={() => setTheme("dark")}>Dark</button>
-      <button onClick={() => setTheme("system")}>System</button>
-    </div>
+    <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
+      <ThemeToggle />
+      <h1>{t("hero.title")}</h1>
+    </main>
   );
 };
 
